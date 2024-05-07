@@ -5,8 +5,8 @@ public class Estacao extends Propriedade{
         super() ;
     }
     //construtor explicito
-    public Estacao(int id,String nome,String proprietario,int preco,float aluguel) {
-        super(id,nome,proprietario,preco,aluguel) ;
+    public Estacao(int id,String descricao,Jogador dono,String nome,int preco,float aluguel) {
+        super(id,descricao,dono,nome,preco,aluguel) ;
     }
     //sem sobrecarga de métodos
 }

@@ -13,8 +13,8 @@ public class Terreno extends Propriedade {
         this.hotel = false ;
     }
     
-    public Terreno(int id,String nome,String proprietario,int preco,float aluguel,int numeroCasas,int valorCasas,int valorHotel,boolean hotel) {
-        super(id,nome,proprietario,preco,aluguel) ;
+    public Terreno(int id,String descricao,Jogador dono,String nome,int preco,float aluguel,int numeroCasas,int valorCasas,int valorHotel,boolean hotel) {
+        super(id,descricao,dono,nome,preco,aluguel) ;
         this.numeroCasas = numeroCasas ;
         this.valorCasas = valorCasas ;
         this.valorHotel = valorHotel ;

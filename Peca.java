@@ -19,4 +19,12 @@ public class Peca {
     public void setPosicao(int posicao) {
         this.posicao = posicao ;
     }
+    @Override
+    public String toString() {
+        return "Peca{" +
+                "cor='" + cor + '\'' +
+                ", posicao=" + posicao +
+                '}';
+    }
+
 }

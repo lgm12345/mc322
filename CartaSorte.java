@@ -1,6 +1,4 @@
-public class CartaSorte {
-    private int id ;
-    private String descricao ;
+public class CartaSorte extends Carta{
     private int movimento ;
     private int efeito ;
     private float valor ;
@@ -8,10 +6,14 @@ public class CartaSorte {
     private int tempo ;
     private String restricao ;
 
-    //Construtor
-    public CartaSorte(int id,String descricao,int movimento,int efeito,float valor,String acao,int tempo,String restricao) {
-        this.id = id ;
-        this.descricao = descricao ;
+    //Construtor implicito
+    public CartaSorte() {
+
+    }
+
+    //Construtor explicito
+    public CartaSorte(int id,String descricao,Jogador dono,int movimento,int efeito,float valor,String acao,int tempo,String restricao) {
+        super(id,descricao,dono) ;
         this.movimento = movimento ;
         this.efeito = efeito ;
         this.valor = valor ;
@@ -20,15 +22,7 @@ public class CartaSorte {
         this.restricao = restricao ;
     }
     //getters e setters
-
-    public int getId() {
-        return id ;
-    }
-    
-    public String getDescricao() {
-        return descricao ;
-    }
-    
+    //conferir se existem metodos para sobrescrever
     public int getMovimento() {
         return movimento ;
     }
@@ -52,15 +46,7 @@ public class CartaSorte {
     public String getRestricao() {
         return restricao ;
     }
-    
-    public void setId(int id) {
-        this.id = id ;
-    }
-    
-    public void setDescricao(String descricao) {
-        this.descricao = descricao ;
-    }
-    
+
     public void setMovimento(int movimento) {
         this.movimento = movimento ;
     }

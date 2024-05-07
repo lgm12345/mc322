@@ -1,40 +1,26 @@
-public class Propriedade {
-    private int id ;
+public class Propriedade extends Carta{
     private String nome ;
-    private String proprietario ;
     private int preco ;
     private float aluguel ;
     
     //Construtor implicito
     public Propriedade() {
+        super() ;
     }
     //Construtor explicito
-    public Propriedade(int id,String nome,String proprietario,int preco,float aluguel) {
-        this.id = id ;
+    public Propriedade(int id,String descricao,Jogador dono,String nome,int preco,float aluguel) {
+        super(id,descricao,dono) ;
         this.nome = nome ;
-        this.proprietario = proprietario ;
         this.preco = preco ;
         this.aluguel = aluguel ;
     }
     
     //getters e setters
-    public int getId() {
-        return id ;
-    }
-    public void setId(int id) {
-        this.id = id ;
-    }
     public String getNome() {
         return nome ;
     }
     public void setNome(String nome) {
         this.nome = nome ;
-    }
-    public String getProprietario() {
-        return proprietario ;
-    }
-    public void setProprietario(String proprietario) {
-        this.proprietario = proprietario ;
     }
     public int getPreco() {
         return preco ;

@@ -1,3 +1,4 @@
+import java.util.ArrayList ;
 public class Jogador {
     private int id ;
     private int dinheiro ;
@@ -5,9 +6,11 @@ public class Jogador {
     private String cpf ;
     private String foto ;
     private String email ;
+    private ArrayList<Carta> cartas = new ArrayList<>() ;
+    private Peca peca ;
     private static int numeroJogadores = 0 ;
 
-    public Jogador(int dinheiro,String nome,String cpf,String foto,String email) {
+    public Jogador(int dinheiro,String nome,String cpf,String foto,String email,Peca peca) {
         numeroJogadores = numeroJogadores + 1 ;
         this.id = numeroJogadores ;
         this.dinheiro = dinheiro ;
@@ -15,6 +18,7 @@ public class Jogador {
         this.cpf = cpf ;
         this.foto = foto ;
         this.email = email ;
+        this.peca = peca ;
     }
 
     public int getId() {
@@ -49,5 +53,28 @@ public class Jogador {
     }
     public void setEmail(String email) {
         this.email = email ;
+    }
+    public boolean adicionaCarta(Carta carta) {
+        return cartas.add(carta) ;
+    }
+    public boolean removeCarta(Carta carta)  {
+        return cartas.remove(carta) ;
+    }
+    public String getPeca() {
+        return peca.toString() ;
+    }
+    public void setPeca(Peca peca) {
+        this.peca = peca ;
+    }
+    @Override
+    public String toString() {
+        return "Jogador{" +
+                "id=" + id +
+                ", dinheiro=" + dinheiro +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", foto='" + foto + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

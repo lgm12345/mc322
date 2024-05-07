@@ -3,8 +3,8 @@ public class ServicoPublico extends Propriedade{
     public ServicoPublico() {
         super() ;
     }
-    public ServicoPublico(int id,String nome,String proprietario,int preco,float aluguel) {
-        super(id,nome,proprietario,preco,aluguel) ;
+    public ServicoPublico(int id,String descricao,Jogador dono,String nome,int preco,float aluguel) {
+        super(id,descricao,dono,nome,preco,aluguel) ;
     }
     //sobrecarga do método calcular aluguel
     public float calcularAluguel(int dados) {
