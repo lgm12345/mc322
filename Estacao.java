@@ -1,12 +1,15 @@
 public class Estacao extends Propriedade{
-    
+    private int tarifa ;
     //construtor implicito
     public Estacao() {
         super() ;
     }
     //construtor explicito
-    public Estacao(int id,String descricao,Jogador dono,String nome,int preco,float aluguel) {
-        super(id,descricao,dono,nome,preco,aluguel) ;
+    public Estacao(int id,String descricao,TipoCarta tipo,Jogador dono,String nome,int preco,float aluguel) {
+        super(id,descricao,tipo,dono,nome,preco,aluguel) ;
     }
-    //sem sobrecarga de métodos
+
+    public float calcularAluguel() {
+        return (super.calcularAluguel() + tarifa ) ;
+    }
 }

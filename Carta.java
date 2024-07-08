@@ -1,19 +1,18 @@
 public class Carta {
     private int id ;
     private String descricao ;
-    private Jogador dono ;
+    private TipoCarta tipo ;
     //construtor implicito
     public Carta() {
 
     }
 
     //construtor explicito
-    public Carta(int id,String descricao,Jogador dono) {
+    public Carta(int id,String descricao,TipoCarta tipo) {
         this.id = id ;
         this.descricao = descricao ;
-        this.dono = dono ;
+        this.tipo = tipo ;
     }
-
     public int getId() {
         return id ;
     }
@@ -26,10 +25,10 @@ public class Carta {
     public void setDescricao(String descricao) {
         this.descricao = descricao ;
     }
-    public Jogador getDono() {
-        return dono ;
+    public TipoCarta geTipoCarta() {
+        return tipo ;
     }
-    public void setDono(Jogador dono) {
-        this.dono = dono ;
+    public void setTipoCarta(TipoCarta tipo) {
+        this.tipo = tipo ;
     }
 }

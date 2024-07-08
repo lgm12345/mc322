@@ -7,6 +7,7 @@ public class Jogador {
     private String foto ;
     private String email ;
     private ArrayList<Carta> cartas = new ArrayList<>() ;
+    private ArrayList<Propriedade> propriedades = new ArrayList<>() ;
     private Peca peca ;
     private static int numeroJogadores = 0 ;
 
@@ -20,7 +21,14 @@ public class Jogador {
         this.email = email ;
         this.peca = peca ;
     }
-
+    public boolean compraPropriedade(Propriedade propriedade) {
+        if (dinheiro > propriedade.getPreco()) {
+            return propriedades.add(propriedade) ;
+        }
+        else {
+            return false ;
+        }
+    }
     public int getId() {
         return id ;
     }

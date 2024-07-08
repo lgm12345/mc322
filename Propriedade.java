@@ -1,4 +1,5 @@
 public class Propriedade extends Carta{
+    private Jogador dono ;
     private String nome ;
     private int preco ;
     private float aluguel ;
@@ -8,8 +9,9 @@ public class Propriedade extends Carta{
         super() ;
     }
     //Construtor explicito
-    public Propriedade(int id,String descricao,Jogador dono,String nome,int preco,float aluguel) {
-        super(id,descricao,dono) ;
+    public Propriedade(int id,String descricao,TipoCarta tipo,Jogador dono,String nome,int preco,float aluguel) {
+        super(id,descricao,tipo) ;
+        this.dono = dono ;
         this.nome = nome ;
         this.preco = preco ;
         this.aluguel = aluguel ;
